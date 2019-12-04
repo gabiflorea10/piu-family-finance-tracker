@@ -119,3 +119,31 @@
     margin-top: 35px;
     margin-right: 35px;
 }
+
+#gest-cheltuieli-listare-top-title{
+    display: inline-block;
+    margin-top: 60px;
+    font-size: 65px;
+    color: white;
+    margin-left: 18px;
+}
+
+.gest-cheltuieli-listare-top-right-plus {
+    font-size: 100px;
+    color: white;
+    float: right;
+    display: inline-block;
+    margin-top: 50px;
+    margin-right: 50px;
+
+}
+
+.gest-cheltuieli-listare-top-left-icon {
+    font-size: 60px;
+    color: white;
+    float: left;
+    display: inline-block;
+    margin-top: 68px;
+    margin-left : 45px;
+
+}
