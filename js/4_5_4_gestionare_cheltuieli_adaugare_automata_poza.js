@@ -75,6 +75,7 @@ $(document).ready(() => {
         sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
         window.location = "./4_5_2_gestionare_cheltuieli_listare.html";
     });
+
 });
 
 

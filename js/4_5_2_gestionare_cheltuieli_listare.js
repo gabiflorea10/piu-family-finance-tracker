@@ -6,18 +6,7 @@ $(document).ready(() => {
             $('#gest-cheltuieli-listare-top-title').text('Auto');
             $('#gest-cheltuieli-top-left-icon').attr('class', 'fas fa-car gest-cheltuieli-listare-top-left-icon');
 
-            let cheltuieliList = JSON.parse(sessionStorage.getItem('cheltuieliList-' + page));
-
-            if (cheltuieliList === null) {
-                cheltuieliList = [{
-                    'description': 'Reparatie garnitura',
-                    'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'
-                }, {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
-                    {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
-                sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-            }
-
-            populateList(cheltuieliList);
+            chooseList('car');
 
             break;
         }
@@ -28,16 +17,7 @@ $(document).ready(() => {
 
             let cheltuieliList = JSON.parse(sessionStorage.getItem('cheltuieliList-' + page));
 
-            if (cheltuieliList === null) {
-                cheltuieliList = [{
-                    'description': 'Reparatie garnitura',
-                    'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'
-                }, {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
-                    {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
-                sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-            }
-
-            populateList(cheltuieliList);
+            chooseList('shirt');
 
             break;
         }
@@ -46,18 +26,7 @@ $(document).ready(() => {
             $('#gest-cheltuieli-listare-top-title').html('Divertisment');
             $('#gest-cheltuieli-top-left-icon').attr('class', 'fas fa-gamepad gest-cheltuieli-listare-top-left-icon');
 
-            let cheltuieliList = JSON.parse(sessionStorage.getItem('cheltuieliList-' + page));
-
-            if (cheltuieliList === null) {
-                cheltuieliList = [{
-                    'description': 'Reparatie garnitura',
-                    'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'
-                }, {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
-                    {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
-                sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-            }
-
-            populateList(cheltuieliList);
+            chooseList('gamepad');
 
             break;
         }
@@ -65,18 +34,7 @@ $(document).ready(() => {
             $('#gest-cheltuieli-listare-top-title').html('Mancare');
             $('#gest-cheltuieli-top-left-icon').attr('class', 'fas fa-hamburger gest-cheltuieli-listare-top-left-icon');
 
-            let cheltuieliList = JSON.parse(sessionStorage.getItem('cheltuieliList-' + page));
-
-            if (cheltuieliList === null) {
-                cheltuieliList = [{
-                    'description': 'Reparatie garnitura',
-                    'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'
-                }, {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
-                    {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
-                sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-            }
-
-            populateList(cheltuieliList);
+            chooseList('hamburger');
 
             break;
         }
@@ -84,18 +42,7 @@ $(document).ready(() => {
             $('#gest-cheltuieli-listare-top-title').html('Combustibil');
             $('#gest-cheltuieli-top-left-icon').attr('class', 'fas fa-gas-pump gest-cheltuieli-listare-top-left-icon');
 
-            let cheltuieliList = JSON.parse(sessionStorage.getItem('cheltuieliList-' + page));
-
-            if (cheltuieliList === null) {
-                cheltuieliList = [{
-                    'description': 'Reparatie garnitura',
-                    'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'
-                }, {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
-                    {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
-                sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-            }
-
-            populateList(cheltuieliList);
+            chooseList('gas-pump');
 
             break;
         }
@@ -103,18 +50,7 @@ $(document).ready(() => {
             $('#gest-cheltuieli-listare-top-title').html('General');
             $('#gest-cheltuieli-top-left-icon').attr('class', 'fas fa-shopping-cart gest-cheltuieli-listare-top-left-icon');
 
-            let cheltuieliList = JSON.parse(sessionStorage.getItem('cheltuieliList-' + page));
-
-            if (cheltuieliList === null) {
-                cheltuieliList = [{
-                    'description': 'Reparatie garnitura',
-                    'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'
-                }, {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
-                    {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
-                sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-            }
-
-            populateList(cheltuieliList);
+            chooseList('cart');
 
             break;
         }
@@ -122,18 +58,8 @@ $(document).ready(() => {
             $('#gest-cheltuieli-listare-top-title').html('Cadouri');
             $('#gest-cheltuieli-top-left-icon').attr('class', 'fas fa-gift gest-cheltuieli-listare-top-left-icon');
 
-            let cheltuieliList = JSON.parse(sessionStorage.getItem('cheltuieliList-' + page));
 
-            if (cheltuieliList === null) {
-                cheltuieliList = [{
-                    'description': 'Reparatie garnitura',
-                    'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'
-                }, {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
-                    {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
-                sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-            }
-
-            populateList(cheltuieliList);
+            chooseList('gift');
 
             break;
         }
@@ -141,18 +67,7 @@ $(document).ready(() => {
             $('#gest-cheltuieli-listare-top-title').html('Sanatate');
             $('#gest-cheltuieli-top-left-icon').attr('class', 'fas fa-pills gest-cheltuieli-listare-top-left-icon');
 
-            let cheltuieliList = JSON.parse(sessionStorage.getItem('cheltuieliList-' + page));
-
-            if (cheltuieliList === null) {
-                cheltuieliList = [{
-                    'description': 'Reparatie garnitura',
-                    'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'
-                }, {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
-                    {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
-                sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-            }
-
-            populateList(cheltuieliList);
+            chooseList('pills');
 
             break;
         }
