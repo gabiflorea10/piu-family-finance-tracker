@@ -10,13 +10,12 @@ $(document).ready(() => {
         if (userName === "parent" && password === "parent") {
             window.location = '/piu-family-finance-tracker/html/2_1_pagina_principala_adult.html';
         }
-        else if(userName === "copil" && password === "copil"){
+        else if(userName === "child" && password === "child"){
             window.location = '/piu-family-finance-tracker/html/2_2_pagina_principala_copil.html';
         }
         else {
             alert('User sau parola gresite');
         }
     });
-
 
 });

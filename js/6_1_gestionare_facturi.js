@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(() => {
     let listStringPopulator = "";
     let populate = sessionStorage.getItem('populate');
