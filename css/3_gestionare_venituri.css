@@ -120,8 +120,8 @@ form input {
 
 form select {
     display: inline-block;
-    height: 90px;
-    font-size: 30px;
+    height: 95px;
+    font-size: 55px;
     line-height: 1;
     width: 580px;
     margin-left: 5px;
@@ -129,26 +129,13 @@ form select {
     border-radius: 15px;
     background: white url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") no-repeat 60px center;
     appearance:none;
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
+    -moz-appearance:none;
+    -webkit-appearance:none;
     background-position-x: 520px;
 }
-
-/*form select {*/
-/*    width: 580px;*/
-/*    padding: 5px;*/
-/*    font-size: 30px;*/
-/*    line-height: 1;*/
-/*    border: 0;*/
-/*    border-radius: 5px;*/
-/*    height: 34px;*/
-/*    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;*/
-/*    appearance:none;*/
-/*    -moz-appearance:none; !* Firefox *!*/
-/*    -webkit-appearance:none; !* Safari and Chrome *!*/
-/*    background-position-x: 550px;*/
-
-/*}*/
+form select option{
+    font-size: 25px;
+}
 
 #gest-venituri-add-income-btn-adauga{
     width: 300px;
