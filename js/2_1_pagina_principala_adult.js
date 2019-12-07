@@ -35,7 +35,7 @@ $(document).ready(() => {
     });
 
     $('#pagina-principala-li-istoric').on('click', function () {
-        window.location = "./10_vizualizare_istoric.html";
+        window.location = "./10_3_vizualizare_istoric.html";
     });
 
     $('#pagina-principala-li-copii').on('click', function () {
