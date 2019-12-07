@@ -29,10 +29,95 @@
     float: left;
 }
 
+.gest-copii-plus-sign {
+    color: white;
+    font-size: 100px;
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+    display: inline-block;
+}
+
 #gest-conturi-copii-top-title {
     display: inline-block;
     margin-top: 60px;
     font-size: 65px;
     color: white;
     margin-left: 80px;
+}
+
+#gest-copii-list-title {
+    color: white;
+    font-size: 50px;
+    margin-left: 50px;
+}
+
+#conturi-copii-main-list {
+    list-style-type: none;
+    display: block;
+    background: white;
+    padding: 0;
+}
+
+.conturi-copii-main-list-element {
+    border: 1px solid black;
+}
+
+.conturi-copii-main-list-element-name {
+    display: inline-block;
+    font-size: 50px;
+    margin-left: 35px;
+}
+
+.conturi-copii-main-list-element-money {
+    display: inline-block;
+    font-size: 50px;
+    float: right;
+    margin-right: 20px;
+}
+
+.conturi-copii-plus-sign {
+    color: white;
+    font-size: 100px;
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+    display: inline-block;
+}
+
+form label{
+    display: inline-block;
+    font-size: 65px;
+    margin-right: 30px;
+    margin-top: 40px;
+    margin-left: 50px;
+    color: white;
+}
+
+form input {
+    display: inline-block;
+    height: 65px;
+    font-size: 60px;
+    width: 550px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#conturi-copii-add-money {
+    margin-left: 43px;
+}
+
+#conturi-copii-add-button {
+    width: 300px;
+    height: 150px;
+    font-size: 50px;
+    margin-left: 340px;
+    margin-top: 100px;
+}
+
+#mesaj {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    margin-left: 50px;
 }
