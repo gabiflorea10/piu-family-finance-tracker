@@ -1,4 +1,4 @@
-.copil-adaugare-obiectiv-body {
+.copil-editare-obiectiv-body {
     background: #76b852; /* fallback for old browsers */
     background: -webkit-linear-gradient(right, #76b852, #8DC26F);
     background: -moz-linear-gradient(right, #76b852, #8DC26F);
@@ -22,7 +22,7 @@
 
 
 
-.copil-adaugare-obiectiv-back-arrow{
+.copil-editare-obiectiv-back-arrow{
     color: #76b852;
     font-size: 100px;
     margin-top: 50px;
@@ -31,7 +31,7 @@
     float: left;
 }
 
-#copil-adaugare-obiectiv-top-title {
+#copil_editare_obiectiv-top-title{
     display: inline-block;
     margin-top: 60px;
     font-size: 65px;
@@ -54,7 +54,7 @@ h1
 }
 
 #div_tree  {
-text-align: center;
+    text-align: center;
 }
 
 
@@ -89,7 +89,7 @@ form input {
     font-size: 50px;
     background-color: #e6ffe6;
     border-radius: 30px;
-    width: 300px;
+    width: 350px;
     height: 70px;
     margin-top: 50px;
     color: #76b852;
@@ -110,4 +110,8 @@ form select option{
     font-size: 10px;
     color: #76b852;
 
+}
+
+#suma_adaugata_div{
+    margin-top: 50px;
 }
