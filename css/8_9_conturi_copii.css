@@ -67,13 +67,15 @@
     display: inline-block;
     font-size: 50px;
     margin-left: 35px;
+    margin-bottom: 0px;
 }
 
 .conturi-copii-main-list-element-money {
     display: inline-block;
     font-size: 50px;
     float: right;
-    margin-right: 20px;
+    margin-right: 35px;
+    margin-bottom: 10px;
 }
 
 .conturi-copii-plus-sign {
@@ -120,4 +122,52 @@ form input {
     color: red;
     font-size: 50px;
     margin-left: 50px;
+}
+
+.conturi-copii-main-list-element-buttons1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 690px;
+    border-radius: 10px 10px 10px 10px;
+    border-color: black;
+    background-color: #76b852;
+}
+
+.conturi-copii-main-list-element-buttons2 {
+    font-size: 30px;
+    margin-left: 10px;
+    border-radius: 10px 10px 10px 10px;
+    border-color: black;
+    background-color: #76b852;
+}
+
+#gest-conturi-copii-nume-copil {
+    color: white;
+    font-size: 80px;
+    margin-left: 50px;
+    font-style: italic;
+}
+
+#gest-conturi-copii-bani-copil {
+    color: white;
+    font-size: 70px;
+    margin-left: 50px;
+}
+
+#gest-conturi-copii-label {
+    display: inline-block;
+    font-size: 65px;
+    padding: 0px;
+    margin-top: 100px;
+    margin-left: 50px;
+    color: white;
+}
+
+#gest-conturi-copii-input {
+    font-size: 65px;
+    margin-right: 30px;
+    margin-top: 40px;
+    margin-left: 50px;
+    color: black;
+    width: 650px;
 }

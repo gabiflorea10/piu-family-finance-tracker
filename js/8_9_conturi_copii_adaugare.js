@@ -27,7 +27,7 @@ $(document).ready(() => {
 
 function verifyName() {
     var name = $('#conturi-copii-add-name').val();
-    var letters = /^[A-Za-z]+$/;
+    var letters = /^[a-zA-Z]+$/;
     if (name.match(letters) && name.length != 0) {
         return true;
     } else {
