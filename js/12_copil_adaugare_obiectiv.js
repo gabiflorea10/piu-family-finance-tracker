@@ -12,7 +12,7 @@ $(document).ready(() => {
             return;
         }
 
-        const newElement = {name: name, date: date, suma: suma, mod_economisire: mod_economire};
+        const newElement = {name: name, date: date, suma: suma, mod_economisire: mod_economire, economisiti: 0 };
         console.log(name + " " + suma + " " + date + " " + mod_economire);
 
         let obiectiveList = sessionStorage.getItem('obiectiveList');
