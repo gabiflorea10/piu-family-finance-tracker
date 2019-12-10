@@ -17,7 +17,8 @@
     height: 200px;
     margin: 0;
     padding: 0;
-
+    overflow: hidden;
+    position: fixed;
 }
 
 .viz-istoric-back-arrow{
@@ -39,7 +40,7 @@
 
 #vizualizare-istoric-title {
     display: inline-block;
-    margin-top: 49px;
+    margin-top: 36px;
     margin-bottom: 50px;
     font-size: 100px;
     color: white;
@@ -91,6 +92,20 @@
 
 #vizualizare-istoric-main-list-element3 {
     height: 440px;
+    border-bottom: 3px solid black;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+#vizualizare-istoric-main-list-element4 {
+    height: 440px;
+    border-bottom: 3px solid black;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+#vizualizare-istoric-main-list-element5 {
+    height: 440px;
     -webkit-columns: 2;
     -moz-columns: 2;
 }
@@ -112,6 +127,22 @@
 }
 
 #vizualizare-istoric-main-list-element-title3 {
+    font-size: 70px;
+    color: black;
+    margin: 0px;
+    height: 440px;
+    text-decoration: none;
+}
+
+#vizualizare-istoric-main-list-element-title4 {
+    font-size: 70px;
+    color: black;
+    margin: 0px;
+    height: 440px;
+    text-decoration: none;
+}
+
+#vizualizare-istoric-main-list-element-title5 {
     font-size: 70px;
     color: black;
     margin: 0px;
