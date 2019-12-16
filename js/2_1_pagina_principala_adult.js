@@ -34,6 +34,10 @@ $(document).ready(() => {
         window.location = "./7_gestionare_conturi.html";
     });
 
+    $('#pagina-principala-li-economisire').on('click',function () {
+        window.location = "./11_economisire.html";
+    });
+
     $('#pagina-principala-li-istoric').on('click', function () {
         window.location = "./10_vizualizare_istoric.html";
     });
