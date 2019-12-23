@@ -115,3 +115,19 @@ form select option{
 #suma_adaugata_div{
     margin-top: 50px;
 }
+
+section div label {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+#suma_alerta {
+    color: #ff253a;
+}
+#alert_div {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+
+}

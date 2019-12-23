@@ -35,17 +35,31 @@ function populateList(list) {
             img = "..\\resources\\pictures\\tree5.png";
         }
 
-        listStringPopulator += '<li>' +
-            '       <img src='+'\''+img+'\''+'>'+
-            '            <div>' +
-            '                <label>'+objective.name+'</label><br>' +
-            '                <label>Cost total : '+objective.suma+' lei</label><br>' +
-            '                <label>Economisiți : '+objective.economisiti+' lei</label><br>' +
-            '                <button onclick="editeaza(\''+objective.name+'\',\''+objective.suma.toString()+'\'+\''+0+'\')">Economisește</button>'+
+        if(objective.suma == objective.economisiti) {
+            listStringPopulator += '<li>' +
+                '       <img src=' + '\'' + img + '\'' + '>' +
+                '            <div>' +
+                '                <label>' + objective.name + '</label><br>' +
+                '                <label>Cost total : ' + objective.suma + ' lei</label><br>' +
+                '                <label>Economisiți : ' + objective.economisiti + ' lei</label><br>' +
+                '                <label style="color:greenyellow;">Obiectiv finalizat</label><br>' +
 
-        '            </div>' +
-            '</li>';
+                '            </div>' +
+                '</li>';
+        } else {
+            listStringPopulator += '<li>' +
+                '       <img src=' + '\'' + img + '\'' + '>' +
+                '            <div>' +
+                '                <label>' + objective.name + '</label><br>' +
+                '                <label>Cost total : ' + objective.suma + ' lei</label><br>' +
+                '                <label>Economisiți : ' + objective.economisiti + ' lei</label><br>' +
+                '                <button onclick="editeaza(\'' + objective.name + '\',\'' + objective.suma.toString() + '\'+\'' + 0 + '\')">Economisește</button>' +
+
+                '            </div>' +
+                '</li>';
+        }
     });
+
     $('#lista_obiective').append(listStringPopulator);
 }
 

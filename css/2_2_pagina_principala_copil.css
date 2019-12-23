@@ -50,11 +50,7 @@
     margin: 0;
 }
 
-.pagina-principala-copil-main-list-element {
-    border: 3px solid white;
-    margin-right: 30px;
-    margin-left: 30px;
-}
+
 
 .pagina-principala-copil-main-list-element-name {
     display: inline-block;
@@ -78,3 +74,6 @@
     text-align: center;
 }
 
+.pagina-principala-copil-main-list div {
+    border-bottom: 2px solid white;
+}

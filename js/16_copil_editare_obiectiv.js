@@ -52,7 +52,14 @@ $(document).ready(() => {
 
     const suma = $('#suma_adaugata').val();
 
-        let obiectiveListParsed = JSON.parse(sessionStorage.getItem('obiectiveList' ));
+    if (!checkSum(suma)) {
+        document.getElementById("suma_alerta").innerHTML = "Vă rugăm introduceți o sumă corectă!";
+        return
+    } else {
+        document.getElementById("suma_alerta").innerHTML = "";
+    }
+
+    let obiectiveListParsed = JSON.parse(sessionStorage.getItem('obiectiveList' ));
 
     if(obiectiveList!=null) {
         obiectiveListParsed.forEach((objective) => {
@@ -62,7 +69,17 @@ $(document).ready(() => {
                 console.log("Suma adaugata"+suma);
                 var integerValue1 = parseInt(objective.economisiti);
                 var integerValue2 = parseInt(suma);
+
+                var needed = objective.suma-objective.economisiti;
+                if (integerValue2 > needed) {
+                    document.getElementById("suma_alerta").innerHTML = "Mai trebuie economisiți doar " + needed +" lei!";
+                    return;
+                } else if (integerValue2==needed){
+                    window.location = "./13_copil_vizualizare_obiective.html";
+                }
+
                 var sum = integerValue1+integerValue2;
+
                 objective.economisiti = sum+"";
 
                 console.log("Economisiti" + objective.economisiti);
@@ -96,3 +113,14 @@ $(document).ready(() => {
     });
 
 });
+
+function checkSum(sum) {
+    var digits = /^[0-9]+$/;
+
+    if (sum.match(digits) && sum.length > 0 && sum[0] != 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+

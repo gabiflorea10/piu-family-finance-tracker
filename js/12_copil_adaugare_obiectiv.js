@@ -8,8 +8,13 @@ $(document).ready(() => {
         const date = $('#data_finalizare').val();
         const mod_economire = $('#mod_economisire').val();
         if (!name || !suma || !date || !mod_economire) {
-            alert('Completati corect datele!');
+            document.getElementById("suma_alerta").innerHTML = "Vă rugăm completați toate câmpurile!";
             return;
+        } else if (!checkSum(suma)) {
+            document.getElementById("suma_alerta").innerHTML = "Vă rugăm introduceți o sumă corectă!";
+            return
+        } else {
+            document.getElementById("suma_alerta").innerHTML = "";
         }
 
         const newElement = {name: name, date: date, suma: suma, mod_economisire: mod_economire, economisiti: 0 };
@@ -29,3 +34,13 @@ $(document).ready(() => {
     });
 
 });
+
+function checkSum(sum) {
+    var digits = /^[0-9]+$/;
+
+    if (sum.match(digits) && sum.length > 0 && sum[0] != 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
