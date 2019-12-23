@@ -10,7 +10,7 @@ $(document).ready(() => {
         if (userName === "parent" && password === "parent") {
             window.location = './2_1_pagina_principala_adult.html';
         }
-        else if(userName === "child" && password === "child"){
+        else if(userName === "marius" && password === "marius"){
             window.location = './2_2_pagina_principala_copil.html';
         }
         else {
