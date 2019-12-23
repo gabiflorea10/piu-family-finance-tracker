@@ -12,6 +12,10 @@ $(document).ready(() => {
         window.location = "./13_copil_vizualizare_obiective.html";
     });
 
+    $('#pagina-principala-reguli').on('click', function () {
+        window.location = "./17_copil_reguli.html";
+    });
+
     $('#logout-button-copil').on('click', function () {
         sessionStorage.clear();
         window.location = "./1_login.html";
