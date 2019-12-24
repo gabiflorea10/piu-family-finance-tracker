@@ -31,7 +31,7 @@ $(document).ready(() => {
     });
 
     $('#pagina-principala-li-conturi').on('click', function () {
-        window.location = "./7_gestionare_conturi.html";
+        window.location = "./7_1_gestionare_conturi.html";
     });
 
     $('#pagina-principala-li-economisire').on('click',function () {
