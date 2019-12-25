@@ -63,17 +63,20 @@ $(document).ready(() => {
             }
 
         }
+        let price  = randomNumberGenerator(20, 1320);
+        let year = randomNumberGenerator(2017, 2019);
+        if (window.confirm("Doriti sa adaugati articolul cu pretul " + price + " RON la data de " + dayString + "-" + monthString + "-" + year + " ?")) {
+            cheltuieliList.push({
+                'description': 'Notita' + randomNumberGenerator(1, 146),
+                'price': price + ' RON',
+                'day': dayString,
+                'month': monthString,
+                'year': year
+            });
 
-        cheltuieliList.push({
-            'description': 'Notita' + randomNumberGenerator(1, 146),
-            'price': randomNumberGenerator(20, 1320),
-            'day' : dayString,
-            'month' : monthString,
-            'year': randomNumberGenerator(2017, 2019)
-        });
-
-        sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-        window.location = "./4_5_2_gestionare_cheltuieli_listare.html";
+            sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
+            window.location = "./4_5_2_gestionare_cheltuieli_listare.html";
+        }
     });
 
 });

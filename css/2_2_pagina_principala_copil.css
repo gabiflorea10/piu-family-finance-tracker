@@ -24,21 +24,20 @@
 #pagina-principala-top-title {
     float: right;
     display: inline-block;
-    font-size: 80px;
     margin-top: 70px;
     font-size: 65px;
     color: #76b852;
-    margin-right: 40px;
+    margin-right: 90px;
 }
 
 #logout-button-copil{
     height: 80px;
-    width: 120px;
     margin-top: 70px;
     margin-left: 40px;
-    font-size: 50px;
-    background-color: #e6ffe6;
+    font-size: 40px;
+    background-color: #ccffca;
     color: #76b852;
+    border-radius: 10px;
     border: 0;
 }
 

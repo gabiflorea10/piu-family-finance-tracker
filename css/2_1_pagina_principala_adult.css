@@ -110,5 +110,7 @@
     height: 80px;
     width: 120px;
     margin-left: 20px;
+    background-color: white;
     font-size: 30px;
+    border-radius: 10px;
 }

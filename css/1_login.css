@@ -24,7 +24,7 @@
     background-color: #d4d6da;
     width: 600px;
     height: 580px;
-    margin-top: 120px;
+    margin-top: 50px;
     margin-left: 190px;
     border-radius: 20px;
     padding-top: 100px;
@@ -80,6 +80,14 @@
     font-family: "Comic Sans MS", serif;
     margin-bottom: 0;
     margin-top: 0;
+}
+
+.logo-image {
+    width: 500px;
+    height: 500px;
+    margin-left: 250px;
+    margin-top: 50px;
+    margin-bottom: 0;
 }
 
 
