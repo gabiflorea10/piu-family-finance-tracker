@@ -181,4 +181,26 @@ $(document).ready(() => {
 
     });
 
+    $('.conturi-main-list-element').click(function(){
+
+        let tipCont = $(this).closest("ul").attr('id');
+
+        if(tipCont === 'conturi-curente-main-list'){
+            sessionStorage.setItem("tipContModificare", "curente");
+        }
+        else{
+            sessionStorage.setItem("tipContModificare", "economii");
+        }
+
+        let nume = $(this).find('.conturi-list-element-name').text();
+        sessionStorage.setItem("numeContModificare", nume);
+
+        let suma = $(this).find('.conturi-main-list-element-suma').text();
+        sessionStorage.setItem("sumaContModificare", suma);
+
+        window.location = "./7_3_gestionare_conturi.html";
+
+    });
+
+
 });

@@ -54,7 +54,7 @@ $(document).ready(() => {
             sessionStorage.setItem('conturiEconomiiList', JSON.stringify(conturiEconomiiList));
             window.location = "./7_1_gestionare_conturi.html";
         }
-        if(tip === "Card"){
+        else if(tip === "Card"){
             let descriere = $('#carduri-add-description').val();
             let suma = $('#carduri-add-suma').val();
             let moneda = $('#gest-carduri-add-moneda').val();
