@@ -106,3 +106,10 @@ form select option{
 #form-carduri{
     display: none;
 }
+
+#mesaj-eroare {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    margin-left: 50px;
+}

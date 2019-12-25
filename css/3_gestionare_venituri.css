@@ -144,3 +144,10 @@ form select option{
     margin-left: 340px;
     margin-top: 100px;
 }
+
+#mesaj-eroare {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    margin-left: 50px;
+}

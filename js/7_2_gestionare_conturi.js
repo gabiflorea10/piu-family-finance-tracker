@@ -30,29 +30,41 @@ $(document).ready(() => {
             let descriere = $('#cont-curent-add-description').val();
             let suma = $('#cont-curent-add-suma').val();
             let moneda = $('#gest-conturi-curente-add-moneda').val();
-            let conturiCurenteList = JSON.parse(sessionStorage.getItem('conturiCurenteList'));
-            sessionStorage.setItem('conturiCurente', 'true');
-            conturiCurenteList.push({
-                'nume': descriere,
-                'suma': suma,
-                'moneda': moneda
-            });
-            sessionStorage.setItem('conturiCurenteList', JSON.stringify(conturiCurenteList));
-            window.location = "./7_1_gestionare_conturi.html";
+
+            if(descriere === "" || suma === ""){
+                $("#mesaj-eroare").text("Completati toate campurile")
+            }
+            else{
+                let conturiCurenteList = JSON.parse(sessionStorage.getItem('conturiCurenteList'));
+                sessionStorage.setItem('conturiCurente', 'true');
+                conturiCurenteList.push({
+                    'nume': descriere,
+                    'suma': suma,
+                    'moneda': moneda
+                });
+                sessionStorage.setItem('conturiCurenteList', JSON.stringify(conturiCurenteList));
+                window.location = "./7_1_gestionare_conturi.html";
+            }
         }
         else if(tip === "ContEconomii"){
             let descriere = $('#cont-economii-add-description').val();
             let suma = $('#cont-economii-add-suma').val();
             let moneda = $('#gest-conturi-economii-add-moneda').val();
-            let conturiEconomiiList = JSON.parse(sessionStorage.getItem('conturiEconomiiList'));
-            sessionStorage.setItem('conturiEconomii', 'true');
-            conturiEconomiiList.push({
-                'nume': descriere,
-                'suma': suma,
-                'moneda': moneda
-            });
-            sessionStorage.setItem('conturiEconomiiList', JSON.stringify(conturiEconomiiList));
-            window.location = "./7_1_gestionare_conturi.html";
+
+            if(descriere === "" || suma === ""){
+                $("#mesaj-eroare").text("Completati toate campurile")
+            }
+            else{
+                let conturiEconomiiList = JSON.parse(sessionStorage.getItem('conturiEconomiiList'));
+                sessionStorage.setItem('conturiEconomii', 'true');
+                conturiEconomiiList.push({
+                    'nume': descriere,
+                    'suma': suma,
+                    'moneda': moneda
+                });
+                sessionStorage.setItem('conturiEconomiiList', JSON.stringify(conturiEconomiiList));
+                window.location = "./7_1_gestionare_conturi.html";
+            }
         }
         else if(tip === "Card"){
             let descriere = $('#carduri-add-description').val();
@@ -62,18 +74,24 @@ $(document).ready(() => {
             let proprietar = $('#carduri-add-proprietar').val();
             let banca = $('#carduri-add-banca').val();
 
-            let carduriList = JSON.parse(sessionStorage.getItem('carduriList'));
-            sessionStorage.setItem('carduri', 'true');
-            carduriList.push({
-                'nume': descriere,
-                'suma': suma,
-                'moneda': moneda,
-                'expiration': data,
-                'proprietar': proprietar,
-                'banca': banca
-            });
-            sessionStorage.setItem('carduriList', JSON.stringify(carduriList));
-            window.location = "./7_1_gestionare_conturi.html";
+            if(descriere === "" || suma === "" || data === "" || proprietar === "" || banca === ""){
+                $("#mesaj-eroare").text("Completati toate campurile")
+            }
+            else{
+                let carduriList = JSON.parse(sessionStorage.getItem('carduriList'));
+                sessionStorage.setItem('carduri', 'true');
+                carduriList.push({
+                    'nume': descriere,
+                    'suma': suma,
+                    'moneda': moneda,
+                    'expiration': data,
+                    'proprietar': proprietar,
+                    'banca': banca
+                });
+                sessionStorage.setItem('carduriList', JSON.stringify(carduriList));
+                window.location = "./7_1_gestionare_conturi.html";
+            }
+
         }
     });
 

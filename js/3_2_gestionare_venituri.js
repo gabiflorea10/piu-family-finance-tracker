@@ -5,20 +5,26 @@ $(document).ready(() => {
         let descriere = $('#gest-venituri-add-description').val();
         let suma = $('#gest-venituri-add-suma').val();
 
-        let incomeList = JSON.parse(sessionStorage.getItem('incomeList'));
+        if(descriere === "" || suma === ""){
+            $("#mesaj-eroare").text("Completati toate campurile")
+        }
+        else{
+            let incomeList = JSON.parse(sessionStorage.getItem('incomeList'));
 
-        sessionStorage.setItem('totalIncome', parseInt(sessionStorage.getItem('totalIncome')) + parseInt(suma));
+            sessionStorage.setItem('totalIncome', parseInt(sessionStorage.getItem('totalIncome')) + parseInt(suma));
 
-        sessionStorage.setItem('addedIncome', 'true');
+            sessionStorage.setItem('addedIncome', 'true');
 
-        incomeList.push({
-            'tip': tip,
-            'descriere': descriere,
-            'suma': suma + ' RON'
-        });
+            incomeList.push({
+                'tip': tip,
+                'descriere': descriere,
+                'suma': suma + ' RON'
+            });
 
-        sessionStorage.setItem('incomeList', JSON.stringify(incomeList));
-        window.location = "./3_1_gestionare_venituri.html";
+            sessionStorage.setItem('incomeList', JSON.stringify(incomeList));
+            window.location = "./3_1_gestionare_venituri.html";
+        }
+
     });
 
 });

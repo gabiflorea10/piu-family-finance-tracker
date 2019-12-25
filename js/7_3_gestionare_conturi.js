@@ -9,33 +9,41 @@ $(document).ready(() => {
 
     $('#gest-conturi-add-btn-adauga').on('click', function () {
 
-        if(tip === "curente"){
+        let suma = $('#cont-curent-add-suma').val();
 
-            let conturiCurenteList = JSON.parse(sessionStorage.getItem('conturiCurenteList'));
-            conturiCurenteList.forEach((cont) => {
-                if(cont.nume === nume){
-                    cont.suma = $('#cont-curent-add-suma').val();
-                }
-            });
-
-            sessionStorage.setItem('conturiCurenteList', JSON.stringify(conturiCurenteList));
-            sessionStorage.setItem('conturiCurente', 'true');
-            window.location = "./7_1_gestionare_conturi.html";
+        if(suma === ""){
+            $("#mesaj-eroare").text("Completati suma")
         }
-        else if(tip === "economii"){
+        else{
+            if(tip === "curente"){
 
-            let conturiEconomiiList = JSON.parse(sessionStorage.getItem('conturiEconomiiList'));
-            conturiEconomiiList.forEach((cont) => {
-                if(cont.nume === nume){
-                    cont.suma = $('#cont-curent-add-suma').val();
-                }
+                let conturiCurenteList = JSON.parse(sessionStorage.getItem('conturiCurenteList'));
+                conturiCurenteList.forEach((cont) => {
+                    if(cont.nume === nume){
+                        cont.suma = suma;
+                    }
+                });
 
-            });
+                sessionStorage.setItem('conturiCurenteList', JSON.stringify(conturiCurenteList));
+                sessionStorage.setItem('conturiCurente', 'true');
+                window.location = "./7_1_gestionare_conturi.html";
+            }
+            else if(tip === "economii"){
 
-            sessionStorage.setItem('conturiEconomiiList', JSON.stringify(conturiEconomiiList));
-            sessionStorage.setItem('conturiEconomii', 'true');
-            window.location = "./7_1_gestionare_conturi.html";
+                let conturiEconomiiList = JSON.parse(sessionStorage.getItem('conturiEconomiiList'));
+                conturiEconomiiList.forEach((cont) => {
+                    if(cont.nume === nume){
+                        cont.suma = suma;
+                    }
+
+                });
+
+                sessionStorage.setItem('conturiEconomiiList', JSON.stringify(conturiEconomiiList));
+                sessionStorage.setItem('conturiEconomii', 'true');
+                window.location = "./7_1_gestionare_conturi.html";
+            }
         }
+
     });
 
 });

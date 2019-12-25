@@ -64,7 +64,7 @@
 }
 
 
-#p1{
+#p1 {
     font-size: 100px;
     color: #da210e;
     margin-left: 160px;
@@ -90,4 +90,9 @@
     margin-bottom: 0;
 }
 
-
+#mesaj-eroare {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    margin-left: 50px;
+}
