@@ -14,17 +14,25 @@ $(document).ready(() => {
         let month = date.split('-')[1];
         let year = date.split('-')[0];
 
-        cheltuieliList.push({
-            'description': description,
-            'price': price + 'RON',
-            'day' : day,
-            'month' : getMonth(month),
-            'year': year
-        });
+        if (price === "" || description === "" || date === "") {
+            $('#gest-cheltuieli-error-message').text("Campurile nu pot fi goale");
+        }
+        else{
+
+            cheltuieliList.push({
+                'description': description,
+                'price': price + 'RON',
+                'day' : day,
+                'month' : getMonth(month),
+                'year': year
+            });
+
+            $('#gest-cheltuieli-error-message').text("");
+            sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
+            window.location = "./4_5_2_gestionare_cheltuieli_listare.html";
+        }
 
 
-        sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
-        window.location = "./4_5_2_gestionare_cheltuieli_listare.html";
 
     });
 
