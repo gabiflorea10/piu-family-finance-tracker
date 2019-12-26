@@ -85,16 +85,73 @@ $(document).ready(() => {
 
 function chooseList(page) {
     let cheltuieliList = JSON.parse(sessionStorage.getItem('cheltuieliList-' + page));
-
     if (cheltuieliList === null) {
-        cheltuieliList = [{
-            'description': 'Reparatie garnitura',
-            'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'
-        }, {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
-            {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
-        sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
+        switch (page) {
+            case "car": {
+                cheltuieliList = [{'description': 'Reparatie garnitura', 'price': '300 RON', 'day': '02', 'month': 'Oct', 'year': '2018'},
+                    {'description': 'Sincronizare', 'price': '235 RON', 'day': '04', 'month': 'Dec', 'year': '2019'},
+                    {'description': 'ITP', 'price': '70 RON', 'day': '10', 'month': 'Nov', 'year': '2017'}];
+                break;
+            }
+
+            case "shirt": {
+                cheltuieliList = [{'description': 'Tricou', 'price': '38 RON', 'day': '03', 'month': 'Nov', 'year': '2018'},
+                    {'description': 'Blugi', 'price': '125 RON', 'day': '11', 'month': 'Aug', 'year': '2019'},
+                    {'description': 'Camasa', 'price': '72 RON', 'day': '08', 'month': 'Jun', 'year': '2018'}];
+
+                break;
+            }
+
+            case "gamepad": {
+                cheltuieliList = [{'description': 'GTA', 'price': '245 RON', 'day': '03', 'month': 'Dec', 'year': '2018'},
+                    {'description': 'Gamepad XBOX', 'price': '223 RON', 'day': '11', 'month': 'Aug', 'year': '2019'},
+                    {'description': 'G2a Gift Card', 'price': '100 RON', 'day': '07', 'month': 'Jun', 'year': '2018'}];
+
+                break;
+            }
+            case "hamburger": {
+                cheltuieliList = [{'description': 'Salata', 'price': '34 RON', 'day': '03', 'month': 'Dec', 'year': '2018'},
+                    {'description': 'Ulei', 'price': '20 RON', 'day': '11', 'month': 'Nov', 'year': '2019'},
+                    {'description': 'Zahar', 'price': '15 RON', 'day': '07', 'month': 'Jun', 'year': '2018'}];
+
+                break;
+            }
+            case "gas-pump": {
+                cheltuieliList = [{'description': 'Benzina', 'price': '34 RON', 'day': '03', 'month': 'Dec', 'year': '2018'},
+                    {'description': 'Motorina', 'price': '20 RON', 'day': '11', 'month': 'Nov', 'year': '2019'},
+                    {'description': 'GPL', 'price': '15 RON', 'day': '07', 'month': 'Jun', 'year': '2018'}];
+
+                break;
+            }
+            case "cart": {
+                cheltuieliList = [{'description': 'Baterii', 'price': '13 RON', 'day': '03', 'month': 'Dec', 'year': '2018'},
+                    {'description': 'Perie', 'price': '10 RON', 'day': '11', 'month': 'Nov', 'year': '2019'},
+                    {'description': 'Hartie', 'price': '20 RON', 'day': '07', 'month': 'Jun', 'year': '2018'}];
+
+                break;
+            }
+            case "gift": {
+                cheltuieliList = [{'description': 'Parfum', 'price': '200 RON', 'day': '03', 'month': 'Dec', 'year': '2018'},
+                    {'description': 'Ciocolata', 'price': '15 RON', 'day': '11', 'month': 'Nov', 'year': '2019'},
+                    {'description': 'XBOX One', 'price': '1310 RON', 'day': '07', 'month': 'Jun', 'year': '2018'}];
+                break;
+            }
+            case "pills": {
+                cheltuieliList = [{'description': 'Algocalmin', 'price': '200 RON', 'day': '03', 'month': 'Dec', 'year': '2018'},
+                    {'description': 'Paracetamol', 'price': '15 RON', 'day': '11', 'month': 'Nov', 'year': '2019'},
+                    {'description': 'Nurofen', 'price': '100 RON', 'day': '07', 'month': 'Jun', 'year': '2018'}];
+                break;
+            }
+            case "plane": {
+                cheltuieliList = [{'description': 'Excursie Japonia Bilet', 'price': '4000 RON', 'day': '03', 'month': 'Dec', 'year': '2018'},
+                    {'description': 'Excursie Elvetia Bilet', 'price': '15222 RON', 'day': '11', 'month': 'Nov', 'year': '2019'},
+                    {'description': 'Excursie America Bilet', 'price': '13546 RON', 'day': '07', 'month': 'Jun', 'year': '2018'}];
+                break;
+            }
+        }
     }
 
+    sessionStorage.setItem('cheltuieliList-' + page, JSON.stringify(cheltuieliList));
     populateList(cheltuieliList);
 }
 
