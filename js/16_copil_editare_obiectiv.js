@@ -12,11 +12,11 @@ $(document).ready(() => {
         obiectiveListParsed.forEach((objective) => {
 
             if (objective.name === objectiveName) {
-                document.getElementById('data_finalizarii').innerHTML = "Data finalizării : "+'\''+objective.date+'\'';
-                document.getElementById('mod_economisire').innerHTML = "Mod economisire : "+'\''+objective.mod_economisire+'\'';
-                document.getElementById('suma_necesara').innerHTML = "Suma totală necesară : "+'\''+objective.suma+'\'';
-                document.getElementById('suma_economisita').innerHTML = "Suma economisită : "+'\''+objective.economisiti+'\'';
-                document.getElementById('h1_id').innerHTML = '\''+objective.name+'\'';
+                document.getElementById('data_finalizarii').innerHTML = "Data finalizării : "+''+objective.date+'';
+                document.getElementById('mod_economisire').innerHTML = "Mod economisire : "+''+objective.mod_economisire+'';
+                document.getElementById('suma_necesara').innerHTML = "Suma totală necesară : "+''+objective.suma+'';
+                document.getElementById('suma_economisita').innerHTML = "Suma economisită : "+''+objective.economisiti+'';
+                document.getElementById('h1_id').innerHTML = ''+objective.name+'';
 
 
                 let procent = objective.economisiti/objective.suma *100;
@@ -84,7 +84,7 @@ $(document).ready(() => {
 
                 console.log("Economisiti" + objective.economisiti);
 
-                document.getElementById('suma_economisita').innerHTML = "Suma economisită : "+'\''+objective.economisiti+'\'';
+                document.getElementById('suma_economisita').innerHTML = "Suma economisită : "+''+objective.economisiti+'';
 
                 let procent = objective.economisiti/objective.suma *100;
                 let img = "..\\resources\\pictures\\tree0.png";
