@@ -3,6 +3,7 @@ $(document).ready(() => {
     let populateList = sessionStorage.getItem('populateEconomisireList');
     console.log(populateList);
     if (populateList === null) {
+        console.log("economyList is empty");
         let economyList = [{'name': 'Vacanta', 'money': '0 RON'},
             {'name': 'Ochelari','money':'100 RON'}];
         sessionStorage.setItem('economyList', JSON.stringify(economyList));

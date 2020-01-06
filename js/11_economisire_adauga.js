@@ -27,6 +27,8 @@ function adauga() {
             });
         }
         sessionStorage.setItem('economyList', JSON.stringify(economyList));
+        sessionStorage.setItem('populateEconomisireList', JSON.stringify(economyList));
+
         console.log(sessionStorage.getItem('economyList'));
         window.location = "./11_economisire.html";
     } else {

@@ -1,6 +1,8 @@
 $(document).ready(() => {
     let showList = "";
-    let populateList = sessionStorage.getItem('populateList');
+    //let populateList = sessionStorage.getItem('populateList');
+    let populateList = sessionStorage.getItem('childrenList');
+
     console.log(populateList);
     if (populateList === null) {
         let childrenList = [{'name': 'Marius', 'money': '350 RON'}];
