@@ -4,15 +4,29 @@ $(document).ready(() => {
     )
     {
     sessionStorage.setItem('buget_value', 3500);
-    sessionStorage.setItem('cheltuieli_value', 2600);
+    sessionStorage.setItem('cheltuieli_value', 1000);
     }
 
     let buget_value = sessionStorage.getItem('buget_value');
     let cheltuieli_value = sessionStorage.getItem('cheltuieli_value');
 
-    let disponibil = buget_value - cheltuieli_value;
+    $('#pagina-principala-disponibil-value').text(buget_value + ' RON');
 
-    $('#pagina-principala-disponibil-value').text(disponibil + ' RON');
+    $('#pagina-principala-ramas-value').text(buget_value-cheltuieli_value + ' RON');
+
+    let percentage = (buget_value-cheltuieli_value)/buget_value *100;
+    $('#percentage_span').text(Math.round(percentage,2)+"%");
+
+    if(percentage < 25) {
+        document.getElementById("indicator_progres").className = "c100 p25 big";
+    } else if (percentage > 25 && percentage < 50) {
+        document.getElementById("indicator_progres").className = "c100 p50 big";
+    } else if (percentage>50&&percentage<75) {
+        document.getElementById("indicator_progres").className = "c100 p75 big";
+    } else {
+        document.getElementById("indicator_progres").className = "c100 p100 big";
+
+    }
 
     $('#pagina-principala-li-cheltuieli').on('click', function () {
         window.location = "./4_5_1_gestionare_cheltuieli_principala.html";

@@ -107,6 +107,15 @@
     font-size: 60px;
     margin-top: -30px;
 }
+
+#pagina-principala-ramas-name{
+    font-size: 60px;
+    text-decoration: underline;
+}
+#pagina-principala-ramas-value{
+    font-size: 60px;
+    margin-top: -30px;
+}
 #logout-button-adult{
     height: 80px;
     width: 120px;
@@ -114,4 +123,11 @@
     background-color: white;
     font-size: 30px;
     border-radius: 10px;
+}
+
+#indicator_div {
+    margin-left: 350px;
+}
+#percentage_span {
+    color: green;
 }

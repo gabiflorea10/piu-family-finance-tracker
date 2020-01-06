@@ -1,17 +1,17 @@
 $(document).ready(() =>{
-    if (sessionStorage.getItem("bugetVal") === null){
-        sessionStorage.setItem("bugetVal", "300 RON");
-        $('.buget-value').text("300 RON");
+    if (sessionStorage.getItem("buget_value") === null){
+        sessionStorage.setItem("buget_value", "3500 RON");
+        $('.buget-value').text("3500 RON");
     }
     else{
-        let bugetValue = sessionStorage.getItem("bugetVal");
-        $('.buget-value').text(bugetValue);
+        let bugetValue = sessionStorage.getItem("buget_value");
+        $('.buget-value').text(bugetValue + " RON");
     }
 
     $('#buget-change-button').on('click', function () {
         let bugetInputVal = $('#buget-change-input').val();
         if (bugetInputVal !== "") {
-            sessionStorage.setItem("bugetVal", bugetInputVal + " RON");
+            sessionStorage.setItem("buget_value", bugetInputVal);
             $('.buget-value').text(bugetInputVal + " RON");
             $('#buget-input-error').text("");
 
